@@ -1,0 +1,223 @@
+/* Reset và cấu hình chung */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f2f2f2;
+}
+
+/* Layout lưới chính */
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Header & footer */
+header,
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Bố cục phần nội dung */
+main {
+  grid-column: 1 / span 3;
+  padding: 20px;
+  background-color: white;
+}
+
+aside {
+  grid-column: 4 / span 1;
+  padding: 20px;
+  background-color: #e0e0e0;
+}
+
+footer {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}
+
+footer .nav1,
+footer .nav2 {
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  main,
+  aside {
+    grid-column: 1 / -1;
+  }
+
+  nav,
+  footer .nav1,
+  footer .nav2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a,
+  footer a {
+    margin: 5px;
+  }
+}
+
+.img-index, .img-about {
+  width: 55%;
+  max-width: 500px;
+  /* Chiều cao cố định */
+  height: 250px;
+  object-fit: cover; /* Cắt ảnh để vừa khung */
+  border-radius: 10px;
+  display: block;
+  margin: 15px auto;
+ 
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+}
+
+.img-about{
+  height: auto;
+}
+
+.show-game{
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  
+  
+}
+
+.slides{
+  display: none;
+  
+  
+}
+
+
+
+.left, .right{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.right{
+  right: 0;
+  border-radius:3px , 0 ;
+}
+
+.left{
+  left:0;
+  border-radius: 0 3px;
+}
+
+.left:hover, .right:hover{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.fade{
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade{
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.dot{
+  cursor: pointer;
+  height: 10px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 20%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+ 
+}
+
+.dot.active{
+  background-color: #717171;
+}
+
+.dot-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.infor-game{
+  background-color: rgb(244, 247, 246);
+  display: flex;
+  /* flex-direction: column; */
+  
+  
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+} 
+
+/* .slide-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 5px;
+  
+  background-color: #fdf8f8;
+  align-items: stretch;
+  justify-content: center;
+  gap: 5px;
+  
+} */
+
+.slides {
+  
+  height: fit-content;
+}
+
