@@ -223,6 +223,7 @@ footer a:hover {
 
 .main-nav{
   background-color: black;
+  color: wheat;
 }
 
 .news-today .img-index{
@@ -374,4 +375,4 @@ main {
     width: 48%;
   }
 }
-</style>
+
