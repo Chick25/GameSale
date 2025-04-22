@@ -221,3 +221,157 @@ footer a:hover {
   height: fit-content;
 }
 
+.main-nav{
+  background-color: black;
+}
+
+.news-today .img-index{
+  width: 100%;
+  
+}
+.news-yesterday .img-index{
+  width: 100%;
+}
+.container-news{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-game, .Today-news, .Yesterday-news{
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.title-news h2{
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #444;
+  padding-bottom: 5px;
+}
+
+
+.infor-news p{
+  font-size: 0.9em;
+  margin-bottom: 5px;
+}
+
+.news-today, .news-yesterday{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-today p, .news-yesterday p{
+  margin-top: 5px;
+  
+
+}
+
+@media (min-width: 768px) {
+  .news-today, .news-yesterday {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .news-today img, .news-yesterday img {
+    width: 45%;
+    margin-right: 5%;
+  }
+}
+
+.main-nav {
+  background-color: #222;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.main-nav a {
+  color: #fff;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  /* text-decoration: none; */
+}
+
+main {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.container-news {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.news-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+}
+
+.title-news h2 {
+  border-left: 5px solid #222;
+  padding-left: 15px;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.infor-news h4 {
+  margin-top: 15px;
+  font-weight: 700;
+}
+
+.infor-news p, time {
+  margin-bottom: 10px;
+  font-size: 0.95em;
+}
+
+.news-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.news-block img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.news-block h3 {
+  font-size: 1.1em;
+  margin-top: 5px;
+  color: #000;
+}
+
+.news-block p {
+  font-size: 0.95em;
+}
+
+.news-block .game-title {
+  font-weight: bold;
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .news-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .news-block {
+    width: 48%;
+  }
+}
+</style>
